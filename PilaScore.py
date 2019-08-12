@@ -69,6 +69,14 @@ class PilaScore:
                 print( temp_prin.valor + " - " + str(temp_prin.x_pos) + ","+ str(temp_prin.y_pos) )          
                 temp_prin = temp_prin.siguiente
 
+    #Imprimir lista adelante
+    def Clear_score(self):
+        temp_prin = self.primero_head
+        while temp_prin != None:         
+            self.eliminar_ultimo()       
+            temp_prin = temp_prin.siguiente
+        self.eliminar_ultimo() 
+
     #para graficar en grapiz la pila score
     def graf_score(self):
 
@@ -96,17 +104,15 @@ class PilaScore:
 
         
 
-
 #lis_score = PilaScore()
-
 #lis_score.insertNodo_Final(0, 0, "1")
 #lis_score.insertNodo_Final(0,1,"2")
 #lis_score.insertNodo_Final(0,2,"3")
-
 #lis_score.Lista_imprimir_ade()
-#lis_score.graf_score()
-#lis_score.eliminar_ultimo()
+##lis_score.graf_score()
+##lis_score.eliminar_ultimo()
 #print("elimando")
+#lis_score.Clear_score()
 #lis_score.Lista_imprimir_ade()
 #lis_score.graf_score()
 

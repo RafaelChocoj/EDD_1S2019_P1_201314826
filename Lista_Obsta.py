@@ -1,4 +1,4 @@
-class NodeDo:
+class NodeOb:
     def __init__(self, x_pos = None, y_pos = None, valor = None ):    
         self.valor = valor
         self.x_pos = x_pos    
@@ -7,11 +7,11 @@ class NodeDo:
         self.siguiente = None       
         self.anterior =  None   
 import os
-class ListaDob:
+class ListaObtaculo:
     def __init__(self):        
         self.primero_head = None 
         self.size = 0
-        #self.ultimo = None
+
 
     def esVacio(self):
         return self.primero_head is None
@@ -19,7 +19,7 @@ class ListaDob:
     #para insertar nodo al principio
     def insert_inicio(self, x_pos, y_pos, valor):
     
-        new_nod = NodeDo(x_pos, y_pos, valor)
+        new_nod = NodeOb(x_pos, y_pos, valor)
         if self.esVacio():    
             self.primero_head = new_nod
             #self.ultimo = new_nod
@@ -35,7 +35,7 @@ class ListaDob:
 
     #para insertar nodo Al final
     def Insert_fin(self, x_pos, y_pos, valor):
-        new_nod = NodeDo(x_pos, y_pos, valor)
+        new_nod = NodeOb(x_pos, y_pos, valor)
 
         if self.esVacio():
             self.primero_head = new_nod
@@ -190,54 +190,6 @@ class ListaDob:
 
         temp_prin = self.primero_head
         #while temp_prin.siguiente is not None:    
-        nod_con = 0
-        while temp_prin != None:    
-            #nodo_name = str(temp_prin.x_pos) + str(temp_prin.y_pos)
-            nodo_name = str(nod_con)
-            nodo_corde = "(" + str(temp_prin.x_pos) + "," + str(temp_prin.y_pos) + ")"
-            f.write("node"+ nodo_name +"[label = \"{<f0>|<f1> "+ nodo_corde +"|<f2> }\"];\n")  
-            
-            if (temp_prin.anterior == None):
-                f.write("node_n1[label = \"null\"];\n")  
-                f.write("node"+ nodo_name +":f0 -> node_n1;\n" )           
-            
-            f.write("node"+ nodo_name +"-> ")
-
-
-            temp_prin = temp_prin.siguiente
-            nod_con = nod_con +1
-
-            if (temp_prin != None):
-                #odo_name_sig = str(temp_prin.x_pos) + str(temp_prin.y_pos)
-                nodo_name_sig = str(nod_con)
-                #nodo_name_ante = str(temp_prin.anterior.x_pos ) + str(temp_prin.anterior.y_pos)
-                nodo_name_ante = str(nod_con - 1)
-                f.write("node"+ nodo_name_sig +";\n")
-
-                #regreoso
-                #f.write("node"+ nodo_name_sig +"-> node" + nodo_name+";\n")
-                f.write("node"+ nodo_name_sig +"-> node" + nodo_name_ante+";\n")
-
-            else:
-                f.write("node_n2;\n")  
-                f.write("node_n2[label = \"null\"];\n")   
-
-        f.write("}")
-        f.close()
-
-        os.system("dot -Tpng list_ser.txt -o list_ser.jpg")
-        #os.system("list_ser.txt")
-        os.system("list_ser.jpg")
-
-    def graf_serpiente_back(self):
-
-        f = open("list_ser.txt", "w")
-
-        f.write("digraph G { rankdir=LR\n")
-        f.write("node [shape=record];\n")
-
-        temp_prin = self.primero_head
-        #while temp_prin.siguiente is not None:    
         while temp_prin != None:    
             nodo_name = str(temp_prin.x_pos) + str(temp_prin.y_pos)
             nodo_corde = "(" + str(temp_prin.x_pos) + "," + str(temp_prin.y_pos) + ")"
@@ -271,8 +223,8 @@ class ListaDob:
         os.system("dot -Tpng list_ser.txt -o list_ser.jpg")
         #os.system("list_ser.txt")
         os.system("list_ser.jpg")
-    
-    
+
+
 #print("****************")
 #lis_dob = ListaDob()
 
