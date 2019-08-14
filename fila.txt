@@ -1,0 +1,9 @@
+digraph G { rankdir=LR
+node [shape=record style=filled];
+p00[label="{<data> (0) |<next>}" pos="0,0!"];
+p10[label="{<data> (1) |<next>}" pos="1,0!"];
+p20[label="{<data> (2) |<next>}" pos="2,0!"];
+p30[label="{<data> (3) |<next>}" pos="3,0!"];
+p40[label="{<data> (4) |<next>}" pos="4,0!" fillcolor="#1f77b4"];
+p50[label="{<data> (5) |<next>}" pos="5,0!"];
+}

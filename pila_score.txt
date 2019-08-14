@@ -1,0 +1,4 @@
+digraph G { rankdir=LR
+node [shape=record];
+node0[label = "|(48,5)|(4,18)|(4,7)|(7,9)"]; 
+}

@@ -1,0 +1,9 @@
+digraph G { rankdir=LR
+node [shape=record];
+nod0[label = "{<f1> (ahin,16)|<f2> }"];
+nod0-> nod1;
+nod1[label = "{<f1> (ahin,0)|<f2> }"];
+nod1-> nod2;
+nod2[label = "{<f1> (ninja,4)|<f2> }"];
+nod2-> null;
+}

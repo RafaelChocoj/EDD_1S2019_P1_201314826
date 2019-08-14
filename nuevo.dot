@@ -1,0 +1,8 @@
+digraph G {
+node [shape = square];
+"A1"->"JUAN";
+"B2"->"JUAN";
+"C3"->"JUAN";
+"D4"->"JUAN";
+"E5"->"JUAN";
+}
